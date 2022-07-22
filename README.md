@@ -95,3 +95,5 @@ endmodule
 ```
 
 In the BUG-1 , out should be equal to inp12 when select line (sel) = 5'b01100. Here in the above code sel = 5'b01101 is repeating two times which gives error while verifying the MUX at sel = 13 (5'b01101) . Below is the error shown while verfying MUX at sel = 13 (5'b01101)
+
+![ alt text] https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/28d6205566186cb668eba90944cdb6401e9d0bbe/images/image2.png
