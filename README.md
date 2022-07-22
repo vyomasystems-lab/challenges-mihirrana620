@@ -9,7 +9,6 @@ The verification environment is setup using Vyoma's UpTickPro provided for the h
  ## Verification Environment
 
 The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (MUX 32 X 1) which takes in 32 2-bit inputs mentioned below and gives 2-bit output *out*. The *out* is determined by input signal *sel*. 
-Below are example of few input ports who are assigned values. Total there are 32 input ports which are assigned 2 bit value and sel (select line) which is assigned 5 bit value.  
 
 ```
     inp0  = 0 
@@ -25,3 +24,4 @@ Below are example of few input ports who are assigned values. Total there are 32
     dut.inp3.value = inp3
     dut.inp4.value = inp4
 ```
+Above are example of few input ports who are assigned values. Total there are 32 input ports which are assigned 2 bit value and sel (select line) which is assigned 5 bit value.  
