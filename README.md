@@ -104,3 +104,7 @@ In BUG-2 , We can observe that there is no sel = 5'b11110 (30) is defined in Cas
 
 In BUG-3 , We know that when the sel line is of 5 bits there should be 32 inputs in the MUX. Hence we need to add one more input i.e. inp31 in input port list. As well as we also need to define a case for sel =  5'b11110 (31) to select inp31.
 
+
+Apart from the above bugs , All other test cases are passed i.e. by changing sel we are able to correctly fetch the input and the output of DUT matches the input value. Below shown are the Test cases which are passed.
+
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image4.png)
