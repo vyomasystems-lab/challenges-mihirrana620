@@ -294,10 +294,10 @@ async def test_mux(dut):
     # dut._log.info(f'sel - {sel}  inp13 - {inp13} out - {int(dut.out.value)}')
     # assert dut.out.value == dut.inp13.value, f" result is incorrect: sel - {sel}  out - {int(dut.out.value)} != inp13 - {int(dut.inp13.value)}   Test Failed !!!"
     
-    sel = 30
-    dut.sel.value = sel
+    # sel = 30
+    # dut.sel.value = sel
 
-    await Timer(4, units='ns')
-    dut._log.info(f'sel - {sel} inp30 - {inp30} out - {int(dut.out.value)}')
-    assert dut.out.value == dut.inp30.value, f" result is incorrect: sel - {sel}  out - {int(dut.out.value)} != inp30 - {int(dut.inp30.value)}   Test Failed !!!"
+    # await Timer(4, units='ns')
+    # dut._log.info(f'sel - {sel} inp30 - {inp30} out - {int(dut.out.value)}')
+    # assert dut.out.value == dut.inp30.value, f" result is incorrect: sel - {sel}  out - {int(dut.out.value)} != inp30 - {int(dut.inp30.value)}   Test Failed !!!"
     
