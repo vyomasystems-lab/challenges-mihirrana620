@@ -6,7 +6,7 @@ The verification environment is setup using Vyoma's UpTickPro provided for the h
 
  ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image1.png)
 
- ## Verification Environment
+ ## Verification Environment (MUX)
 
 The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (MUX 32 X 1) which takes in 32 2-bit inputs mentioned below and gives 2-bit output *out*. The *out* is determined by input signal *sel*. 
 
@@ -25,3 +25,6 @@ The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explaine
     dut.inp4.value = inp4
 ```
 Above are example of few input ports who are assigned values. Total there are 32 input ports which are assigned 2 bit value and sel (select line) which is assigned 5 bit value.  
+
+# Capturing the BUG (MUX)
+
