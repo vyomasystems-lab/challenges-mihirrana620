@@ -4,6 +4,7 @@
 
 import os
 import random
+from cocotb.triggers import Timer
 from pathlib import Path
 
 import cocotb
@@ -22,5 +23,38 @@ async def test_seq_bug1(dut):
     await FallingEdge(dut.clk)  
     dut.reset.value = 0
     await FallingEdge(dut.clk)
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+     
+    await RisingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    dut.reset.value = 0
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    await RisingEdge(dut.clk)
+    dut.inp_bit.value = 0
+    dut.reset.value = 0
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    await RisingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    dut.reset.value = 0
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    await RisingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    dut.reset.value = 0
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+
+    await RisingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    dut.reset.value = 0
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+
+    await RisingEdge(dut.clk)
+    dut.inp_bit.value = 1
+    dut.reset.value = 0
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    assert dut.seq_seen.value == 1, f" Sequence is not seen ... Test Failed !!!"
+
+
+
+
 
     cocotb.log.info('#### CTB: Develop your test here! ######')
