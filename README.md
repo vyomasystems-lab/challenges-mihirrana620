@@ -84,7 +84,7 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
       5'b11011: out = inp27;
       5'b11100: out = inp28;
       5'b11101: out = inp29;               
-                                         ########  BUG-2 PRESENT IN THIS LINE ########
+                                         ########  BUG-2 , BUG-3 PRESENT IN THIS LINE ########
       default: out = 0;
     endcase
   end
@@ -97,3 +97,7 @@ endmodule
 In the BUG-1 , out should be equal to inp12 when select line (sel) = 5'b01100. Here in the above code sel = 5'b01101 is repeating two times which gives error while verifying the MUX at sel = 13 (5'b01101) . Below is the error shown while verfying MUX at sel = 13 (5'b01101)
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image2.png)
+
+In BUG-2 , We can observe that there is no sel = 5'b11110 (30) is defined in Cases. For selecting inp30 we need to define a case for sel = 5'b11110 (30). Hence when we verify the MUX at sel 30 (5'b11110) we get the below error.
+
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image3.png)
