@@ -4,6 +4,4 @@
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
-
-![](image.png)
-
+![]( /workspace/challenges-mihirrana620/image1.png)
