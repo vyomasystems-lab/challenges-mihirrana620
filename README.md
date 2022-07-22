@@ -109,4 +109,4 @@ Apart from the above bugs , All other test cases are passed i.e. by changing sel
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image4.png)
 
-#Resolving the BUG
+# Resolving the BUG
