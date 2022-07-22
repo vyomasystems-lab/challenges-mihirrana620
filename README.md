@@ -108,3 +108,5 @@ In BUG-3 , We know that when the sel line is of 5 bits there should be 32 inputs
 Apart from the above bugs , All other test cases are passed i.e. by changing sel we are able to correctly fetch the input and the output of DUT matches the input value. Below shown are the Test cases which are passed.
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image4.png)
+
+#Resolving the BUG
