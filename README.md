@@ -177,3 +177,5 @@ module Bug_free_Mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
 endmodule 
 ```
 Bug_free_Mux.v is verified using for all the test cases. All the test cases are successfully passed. Below are the results.
+
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image5.png)
