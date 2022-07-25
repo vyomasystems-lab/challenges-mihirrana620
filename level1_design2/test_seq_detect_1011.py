@@ -38,8 +38,9 @@ async def test_seq_bug1(dut):
     
     dut.inp_bit.value = 1
     dut.reset.value = 0
-    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
     await RisingEdge(dut.clk)
+    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+  
 
     
     dut.inp_bit.value = 1
