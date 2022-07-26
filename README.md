@@ -184,3 +184,25 @@ Bug_free_Mux.v is verified using for all the test cases. All the test cases are 
 
 
 ### Verification Environment (Sequence Detector)
+
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (Sequence Detector) which takes in input bit and detect whether 1011 sequnece is seen or not. 
+Below shown is example how 1 bit input is drived.
+
+```
+ """Test for seq detection """
+
+    clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
+    cocotb.start_soon(clock.start())        # Start the clock
+
+    # reset
+    dut.reset.value = 1
+    await FallingEdge(dut.clk)  
+    dut.reset.value = 0
+    await FallingEdge(dut.clk)
+    
+    dut.inp_bit.value = 1
+    dut.reset.value = 0
+    await RisingEdge(dut.clk)
+    dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+   
+```
