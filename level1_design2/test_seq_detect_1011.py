@@ -29,30 +29,32 @@ async def test_seq_bug1(dut):
     dut.inp_bit.value = 1
     dut.reset.value = 0
     await RisingEdge(dut.clk)
-    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
    
     dut.inp_bit.value = 0
     dut.reset.value = 0
     await RisingEdge(dut.clk)
-    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
     
     dut.inp_bit.value = 1
     dut.reset.value = 0
     await RisingEdge(dut.clk)
-    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
   
 
     
     dut.inp_bit.value = 1
     dut.reset.value = 0
     await RisingEdge(dut.clk)
-    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n  current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
 
-     
-    dut.inp_bit.value = 1
-    dut.reset.value = 0
-    await RisingEdge(dut.clk)
-    dut._log.info(f' current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    ## One extra input is needed to pass the test and detect sequence. This is the bug
+
+    # dut.inp_bit.value = 1
+    # dut.reset.value = 0
+    # await RisingEdge(dut.clk)
+    # dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n  current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
+    
     assert dut.seq_seen.value == 1, f" Sequence is not seen ... Test Failed !!!"
 
     cocotb.log.info('#### CTB: Develop your test here! ######')

@@ -64,7 +64,7 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         else
           next_state = IDLE;
       end
-      SEQ_1011:
+      SEQ_1011:                            // Bug is present here
       begin
         next_state = IDLE;
       end
