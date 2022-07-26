@@ -1,6 +1,6 @@
 # challenges-mihirrana620
 
-## MUX Design Verification
+## MUX Design Verification (level1_design1)
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
@@ -179,3 +179,5 @@ endmodule
 Bug_free_Mux.v is verified using for all the test cases. All the test cases are successfully passed. Below are the results.
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image5.png)
+
+## Sequence Detector (level1_design2)
