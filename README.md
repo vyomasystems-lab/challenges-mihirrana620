@@ -180,5 +180,7 @@ Bug_free_Mux.v is verified using for all the test cases. All the test cases are 
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image5.png)
 
-## Sequence Detector (level1_design2)
+## Sequence Detector Design Verification (level1_design2)
 
+
+### Verification Environment (Sequence Detector)
