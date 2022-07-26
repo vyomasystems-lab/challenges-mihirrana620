@@ -6,6 +6,10 @@ import sys
 import operator
 from cocotb.result import ReturnValue
 
+#  10000000100000001000010110011
+
+# 0001000 0000100000  001 00001  0110011
+
 def bitmanip(mav_putvalue_instr, mav_putvalue_src1,mav_putvalue_src2, mav_putvalue_src3):
     instr=hex(mav_putvalue_instr)[2:]
     le=int(instr,16) #convert Hex  to int
@@ -13,8 +17,8 @@ def bitmanip(mav_putvalue_instr, mav_putvalue_src1,mav_putvalue_src2, mav_putval
     le=le.zfill(32)
     length=len(le)
     opcode = le[-7::]
-    func3 = le[length-15:length-12]
-    func7 = le[length-32:length-25]
+    func3 = le[length-15:length-12]     #17-20
+    func7 = le[length-32:length-25]     #0 - 7
     func7_imm = le[length-32:length-27]
     func7_2bit = le[length-27:length-25]
     func7_1bit = le[length-28:length-27]
