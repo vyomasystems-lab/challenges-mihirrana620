@@ -204,5 +204,7 @@ Below shown is example how 1 bit input is drived.
     dut.reset.value = 0
     await RisingEdge(dut.clk)
     dut._log.info(f' inp_bit = {(dut.inp_bit.value)} \n current state - {(dut.current_state.value)} \n next state - {(dut.next_state.value)} seq_seen = {(dut.seq_seen.value)}')
-   
 ```
+
+### Capturing the BUG (Sequence Detector)
+
