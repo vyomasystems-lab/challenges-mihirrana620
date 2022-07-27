@@ -18,10 +18,10 @@ This Hackathon is organized by NIELIT Calicut and technically facilitated by Vyo
 
 The links for the solutions of all the challenges can be found below
 
-level1_design1  : [MUX](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level1_design1)
+level1_design1  : [MUX Design Verification](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level1_design1)
 
-level1_design2  : [Sequence Detector](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level1_design2)
+level1_design2  : [Sequence Detector Design Verification](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level1_design2)
 
-level2_design   : [Bitmanipulation Coprocessor](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level2_design)
+level2_design   : [Bitmanipulation Coprocessor Design Verification](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level2_design)
 
-level3_design   : [Synchronous FIFO](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level3_design)
+level3_design   : [Synchronous FIFO Design Verification](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level3_design)
