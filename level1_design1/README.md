@@ -1,2 +1,0 @@
-# Mux Design Verification
-
