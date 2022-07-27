@@ -66,7 +66,7 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
       5'b01001: out = inp9;  
       5'b01010: out = inp10;
       5'b01011: out = inp11;
-      5'b01101: out = inp12;                 ########  BUG-1 PRESENT IN THIS LINE ########
+      5'b01101: out = inp12;           //      ########  BUG-1 PRESENT IN THIS LINE ########
       5'b01101: out = inp13;
       5'b01110: out = inp14;
       5'b01111: out = inp15;
@@ -84,7 +84,7 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
       5'b11011: out = inp27;
       5'b11100: out = inp28;
       5'b11101: out = inp29;               
-                                         ########  BUG-2 , BUG-3 PRESENT IN THIS LINE ########
+                                      //      ########  BUG-2 , BUG-3 PRESENT IN THIS LINE ########
       default: out = 0;
     endcase
   end
@@ -208,3 +208,77 @@ Below shown is example how 1 bit input is drived.
 
 ### Capturing the BUG (Sequence Detector)
 
+```
+module seq_detect_1011(seq_seen, inp_bit, reset, clk);
+
+  output seq_seen;
+  input inp_bit;
+  input reset;
+  input clk;
+
+  parameter IDLE = 0,
+            SEQ_1 = 1, 
+            SEQ_10 = 2,
+            SEQ_101 = 3,
+            SEQ_1011 = 4;           //  ##### BUG1 - Here state 4 is an extra state which is not needed to detect 1011 sequence 
+
+  reg [2:0] current_state, next_state;
+
+  // if the current state of the FSM has the sequence 1011, then the output is
+  // high
+  assign seq_seen = current_state == SEQ_1011 ? 1 : 0;
+
+  // state transition
+  always @(posedge clk)
+  begin
+    if(reset)
+    begin
+      current_state <= IDLE;
+    end
+    else
+    begin
+      current_state <= next_state;
+    end
+  end
+
+  // state transition based on the input and current state
+  always @(inp_bit or current_state)
+  begin
+    case(current_state)
+      IDLE:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = IDLE;
+      end
+      SEQ_1:
+      begin
+        if(inp_bit == 1)
+          next_state = IDLE;                    // #### BUG - 2  ###### 
+        else
+          next_state = SEQ_10;
+      end
+      SEQ_10:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_101;
+        else
+          next_state = IDLE;
+      end
+      SEQ_101:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1011;                    //  #### BUG - 3 ####            
+        else
+          next_state = IDLE;                       //  #### BUG - 4 ####
+      end
+      SEQ_1011:                            
+      begin                                             // ### REDUNDANT STATE #####
+        next_state = IDLE;
+      end
+    endcase
+  end
+endmodule
+
+```
