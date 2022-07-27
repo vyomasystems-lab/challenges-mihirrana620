@@ -539,7 +539,7 @@ endmodule
 ```
 Here in the above design bug is inserted by changing "+" to "-" i.e. we are decreasing the rd_ptr instead by 1 instead of increasing it by 1. Because of this we get error while verifying Synchronous fifo for read operation. Below shown are the results when we tried to verify Buggy Synchronous FIFO. Firstly we have filled the fifo memory performing the write operation and then while performing read operation we got error.
 
-
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image11.png)
 
 
 
