@@ -404,8 +404,6 @@ async def fifo_write_randomised_test(dut):
 ```
 Below code shows how the input_bits are read from fifo memory
 ```
-
-```
 @cocotb.test()
 async def fifo_read_randomised_test(dut):
     """ Fifo read """
@@ -419,5 +417,6 @@ async def fifo_read_randomised_test(dut):
        
         await FallingEdge(dut.clk)  
         dut._log.info(f' buf_out - {(dut.buf_out.value)} \n buf_empty - {(dut.buf_empty.value)} \n buf_full = {(dut.buf_full.value)} \n fifo_counter = {(dut.fifo_counter.value)} \n buf_mem - {(dut.buf_mem.value)} ')
+
 ```
 
