@@ -374,3 +374,50 @@ Below shows the results when the BUG free Sequence Detector is verified. It can 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
 
 ## Bitmanipulation Coprocessor Design Verification (level2_design)
+
+
+## Synchronous FIFO Design Verification (level3_design)
+
+### Verification Environment (Synchronous FIFO)
+
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (Synchronous FIFO) which takes in input bit and fifo memory is filled. When the fifo is full buf_full becomes 1 and when the fifo is empty buf_empty becomes 1.
+
+Below code shows how the input_bits are written in fifo memory
+```
+@cocotb.test()
+async def fifo_write_randomised_test(dut):
+    """ Fifo write test """
+    clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
+    cocotb.start_soon(clock.start())        # Start the clock
+
+
+    dut.rst.value = 1
+    await FallingEdge(dut.clk)  
+    for i in range(8):
+
+        dut.rst.value = 0
+        dut.wr_en.value = 1
+        dut.rd_en.value = 0
+        dut.buf_in.value = random.randint(0, 15)
+        await FallingEdge(dut.clk)  
+        dut._log.info(f' buf_out - {(dut.buf_out.value)} \n buf_empty - {(dut.buf_empty.value)} \n buf_full = {(dut.buf_full.value)} \n fifo_counter = {(dut.fifo_counter.value)} \n buf_mem - {(dut.buf_mem.value)} ')
+```
+Below code shows how the input_bits are read from fifo memory
+```
+
+```
+@cocotb.test()
+async def fifo_read_randomised_test(dut):
+    """ Fifo read """
+    clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
+    cocotb.start_soon(clock.start())        # Start the clock  
+    for i in range(8):
+
+        dut.rst.value = 0
+        dut.wr_en.value = 0
+        dut.rd_en.value = 1
+       
+        await FallingEdge(dut.clk)  
+        dut._log.info(f' buf_out - {(dut.buf_out.value)} \n buf_empty - {(dut.buf_empty.value)} \n buf_full = {(dut.buf_full.value)} \n fifo_counter = {(dut.fifo_counter.value)} \n buf_mem - {(dut.buf_mem.value)} ')
+```
+

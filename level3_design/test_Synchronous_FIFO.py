@@ -98,7 +98,7 @@ from cocotb.triggers import RisingEdge, FallingEdge
    
 @cocotb.test()
 async def fifo_write_randomised_test(dut):
-    """Test for random numbers """
+    """ Fifo write test """
     clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
     cocotb.start_soon(clock.start())        # Start the clock
 
@@ -116,7 +116,7 @@ async def fifo_write_randomised_test(dut):
 
 @cocotb.test()
 async def fifo_read_randomised_test(dut):
-    """Test for random numbers """
+    """ Fifo read """
     clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
     cocotb.start_soon(clock.start())        # Start the clock  
     for i in range(8):
