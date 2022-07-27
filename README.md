@@ -288,3 +288,7 @@ BUG-1 : As we know 1011 mealy overllapping sequence requires only 4 states the l
 BUG-2 : Here next_state should be equal SEQ_1 when input bit is equal to 1 in order to detect overlapping 1011 sequence.
 
 BUG-3 : Here next_state should be equal SEQ_1 when input bit is equal to 1 and next_state should be equal SEQ_10 when input bit is equal to 0 in order to detect overlapping 1011 sequence.
+
+Below result show that the test case fails beacuse of above bugs and is unable to detect 1011 sequence
+
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image6.png)
