@@ -437,6 +437,110 @@ Both read and write operation test cases are passed
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image10.png)
 
 
+### Inserting a bug in Synchronous FIFO
+
+```
+`timescale 1ns / 1ps
+
+`define BUF_WIDTH 3    
+`define BUF_SIZE ( 1<<`BUF_WIDTH )
+
+module Buggy_Synchronous_FIFO( clk, rst, buf_in, buf_out, wr_en, rd_en, buf_empty, buf_full, fifo_counter );
+
+input                 rst, clk, wr_en, rd_en;   
+
+input [7:0]           buf_in;                   
+
+output[7:0]           buf_out;                  
+
+output                buf_empty, buf_full;      
+
+output[`BUF_WIDTH :0] fifo_counter;             
+   
+
+reg[7:0]              buf_out;
+reg                   buf_empty, buf_full;
+reg[`BUF_WIDTH :0]    fifo_counter;
+reg[`BUF_WIDTH -1:0]  rd_ptr, wr_ptr;           
+reg[7:0]              buf_mem[`BUF_SIZE -1 : 0];  
+
+always @(fifo_counter)
+begin
+   buf_empty = (fifo_counter==0);   
+   buf_full = (fifo_counter == `BUF_SIZE);  
+
+end
+
+always @(posedge clk or posedge rst)
+begin
+   if( rst )
+       fifo_counter <= 0;	
+
+   else if( (!buf_full && wr_en) && ( !buf_empty && rd_en ) )  
+       fifo_counter <= fifo_counter;			
+
+   else if( !buf_full && wr_en )			
+       fifo_counter <= fifo_counter + 1;
+
+   else if( !buf_empty && rd_en )		
+       fifo_counter <= fifo_counter - 1;
+
+   else
+       fifo_counter <= fifo_counter;			
+end
+
+always @( posedge clk or posedge rst)
+begin
+   if( rst )
+      buf_out <= 0;		
+   else
+   begin
+      if( rd_en && !buf_empty )
+         buf_out <= buf_mem[rd_ptr];
+
+      else
+         buf_out <= buf_out;		
+
+   end
+end
+
+always @(posedge clk)
+begin
+   if( wr_en && !buf_full )
+      buf_mem[ wr_ptr ] <= buf_in;		
+
+   else
+      buf_mem[ wr_ptr ] <= buf_mem[ wr_ptr ];
+end
+
+always@(posedge clk or posedge rst)
+begin
+   if( rst )
+   begin
+      wr_ptr <= 0;
+      rd_ptr <= 0;		
+   end
+   else
+   begin
+      if( !buf_full && wr_en )    
+			wr_ptr <= wr_ptr + 1;		
+      else  
+			wr_ptr <= wr_ptr;
+
+      if( !buf_empty && rd_en )   
+			rd_ptr <= rd_ptr - 1;		            // #### BUG IS INSERTED HERE #####
+      else 
+			rd_ptr <= rd_ptr;
+   end
+
+end
+endmodule
+
+```
+Here in the above design bug is inserted by changing "+" to "-" i.e. we are decreasing the rd_ptr instead by 1 instead of increasing it by 1. Because of this we get error while verifying Synchronous fifo for read operation. Below shown are the results when we tried to verify Buggy Synchronous FIFO. Firstly we have filled the fifo memory performing the write operation and then while performing read operation we got error.
+
+
+
 
 
 

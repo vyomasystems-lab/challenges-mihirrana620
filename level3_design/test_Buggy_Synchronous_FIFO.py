@@ -17,6 +17,9 @@ async def test_Buggy_Synchronous_fifo(dut):
     dut.rst.value = 1
     await FallingEdge(dut.clk)  
 
+     # Performing Write operation
+    
+
     dut.rst.value = 0
     dut.wr_en.value = 1
     dut.rd_en.value = 0
@@ -73,6 +76,9 @@ async def test_Buggy_Synchronous_fifo(dut):
     await FallingEdge(dut.clk)  
     dut._log.info(f' buf_out - {(dut.buf_out.value)} \n buf_empty - {(dut.buf_empty.value)} \n buf_full = {(dut.buf_full.value)} \n fifo_counter = {(dut.fifo_counter.value)} \n buf_mem - {(dut.buf_mem.value)} ')
     
+
+    # Performing Read operation
+
     dut.rst.value = 0
     dut.wr_en.value = 0
     dut.rd_en.value = 1

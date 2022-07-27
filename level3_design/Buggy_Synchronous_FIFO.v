@@ -86,7 +86,7 @@ begin
 			wr_ptr <= wr_ptr;
 
       if( !buf_empty && rd_en )   
-			rd_ptr <= rd_ptr - 1;		            //  BUG is present here
+			rd_ptr <= rd_ptr - 1;		            // #### BUG IS INSERTED HERE #####
       else 
 			rd_ptr <= rd_ptr;
    end
