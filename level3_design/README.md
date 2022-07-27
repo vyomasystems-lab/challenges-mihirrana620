@@ -1,6 +1,6 @@
-# Synchronous FIFO Design Verification (level3_design)
+## Synchronous FIFO Design Verification (level3_design)
 
-## Verification Environment (Synchronous FIFO)
+### Verification Environment (Synchronous FIFO)
 
 The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (Synchronous FIFO) which takes in input bit and fifo memory is filled. When the fifo is full buf_full becomes 1 and when the fifo is empty buf_empty becomes 1.
 
@@ -41,7 +41,7 @@ async def fifo_read_randomised_test(dut):
         dut._log.info(f' buf_out - {(dut.buf_out.value)} \n buf_empty - {(dut.buf_empty.value)} \n buf_full = {(dut.buf_full.value)} \n fifo_counter = {(dut.fifo_counter.value)} \n buf_mem - {(dut.buf_mem.value)} ')
 
 ```
-## Design Synchronous FIFO (BUG - Free)
+### Design Synchronous FIFO (BUG - Free)
 
 ```
 `timescale 1ns / 1ps
@@ -141,7 +141,7 @@ end
 endmodule
 ```
 
-## Verification Results of Synchronous FIFO (BUG - Free)
+### Verification Results of Synchronous FIFO (BUG - Free)
 
 Firstly Fifo memory is filled with randomized inputs and with each input fifo_counter increases by 1. When the fifo is full buf_full becomes 1 and when the fifo was empty buf_empty was 1. Below are the results when write operation in fifo is performed.
 
@@ -158,7 +158,7 @@ Both read and write operation test cases are passed
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image10.png)
 
 
-## Inserting a bug in Synchronous FIFO
+### Inserting a bug in Synchronous FIFO
 
 ```
 `timescale 1ns / 1ps
