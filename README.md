@@ -220,7 +220,7 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
             SEQ_1 = 1, 
             SEQ_10 = 2,
             SEQ_101 = 3,
-            SEQ_1011 = 4;           //  ##### BUG1 - Here state 4 is an extra state which is not needed to detect 1011 sequence 
+            SEQ_1011 = 4;           //  ##### BUG1  ########
 
   reg [2:0] current_state, next_state;
 
@@ -271,7 +271,7 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         if(inp_bit == 1)
           next_state = SEQ_1011;                    //  #### BUG - 3 ####            
         else
-          next_state = IDLE;                       //  #### BUG - 4 ####
+          next_state = IDLE;                      
       end
       SEQ_1011:                            
       begin                                             // ### REDUNDANT STATE #####
@@ -282,3 +282,9 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
 endmodule
 
 ```
+
+BUG-1 : As we know 1011 mealy overllapping sequence requires only 4 states the last state SEQ_1011 is redundant.
+
+BUG-2 : Here next_state should be equal SEQ_1 when input bit is equal to 1 in order to detect overlapping 1011 sequence.
+
+BUG-3 : Here next_state should be equal SEQ_1 when input bit is equal to 1 and next_state should be equal SEQ_10 when input bit is equal to 0 in order to detect overlapping 1011 sequence.
