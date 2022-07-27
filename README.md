@@ -1,6 +1,6 @@
 # NIELIT IITM CTB Design Verification Hackathon
 
-## Vyoma's UpTickPro Encironment for hackathon
+## Vyoma's UpTickPro Environment for hackathon
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
