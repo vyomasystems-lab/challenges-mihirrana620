@@ -373,4 +373,4 @@ Below shows the results when the BUG free Sequence Detector is verified. It can 
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
 
-## Bitmanipulation Coprocessor Design Verification
+## Bitmanipulation Coprocessor Design Verification (level2_design)
