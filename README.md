@@ -371,4 +371,5 @@ As it overllaping sequnece next_state values are assigned in such way that allow
 
 Below shows the results when the BUG free Sequence Detector is verified. It can be observed that it detects the overlaaping sequence.
 
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
 
