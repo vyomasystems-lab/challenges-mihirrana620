@@ -1,5 +1,7 @@
 # NIELIT IITM CTB Design Verification Hackathon
 
+![image15](https://user-images.githubusercontent.com/84765232/182156869-24578c69-2fbf-4c62-b9f9-7706d5b27917.png)
+
 # Table of contents
 
 - [About the Capture the bug Hackathon](#about-the-capture-the-bug-hackathon)
