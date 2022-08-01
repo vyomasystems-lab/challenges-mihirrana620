@@ -149,8 +149,7 @@ Firstly Fifo memory is filled with randomized inputs and with each input fifo_co
 
 After the fifo memory is filled the inputs are read. As the fifo follow First in First out principle so the value which was written first in the fifo memory is read first. Below are the results when write operation in fifo is performed
 
-
-![image9](https://user-images.githubusercontent.com/84765232/182144806-f2117d0a-5e73-4d66-bf45-8a95fc10c34f.p
+![image9](https://user-images.githubusercontent.com/84765232/182145455-a6b2f20f-205f-412b-8bb8-5d94e6bc2aac.png)
 
 Both read and write operation test cases are passed
 
