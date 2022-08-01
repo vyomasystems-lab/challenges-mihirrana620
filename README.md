@@ -41,5 +41,7 @@ level3_design   : [Synchronous FIFO Design Verification](https://github.com/vyom
 2. IIT Madras
 3. Lavanya J , Vyoma systems 
 4. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+5. Sumanto kar (Teaching Assistant)
+6. Anmol Saxena (Teaching Assistant)
 
 
