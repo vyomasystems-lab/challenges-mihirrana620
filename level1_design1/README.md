@@ -1,3 +1,10 @@
+# Table of contents
+
+- [MUX Design Verification (level1_design1)](#mux-design-verification-level1_design1)
+  - [Verification Environment (MUX)](#verification-environment-mux)
+  - [Capturing the BUG (MUX)](#capturing-the-bug-mux)
+  - [Resolving the BUG (MUX)](#resolving-the-bug-mux)
+
 # MUX Design Verification (level1_design1)
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
