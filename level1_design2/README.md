@@ -1,3 +1,11 @@
+# Table of contents
+
+- [Sequence Detector Design Verification (level1_design2)](#sequence-detector-design-verification-level1_design2)
+  - [Verification Environment (Sequence Detector)](#verification-environment-sequence-detector)
+  - [Capturing the BUG (Sequence Detector)](#capturing-the-bug-sequence-detector)
+  - [Resolving the BUG (Sequence Detector)](#resolving-the-bug-sequence-detector)
+  - [State Diagram](#state-diagram)
+
 # Sequence Detector Design Verification (level1_design2)
 
 
