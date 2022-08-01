@@ -191,3 +191,7 @@ Below shows the results when the BUG free Sequence Detector is verified. It can 
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
 
+
+## State Diagram 
+
+![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image14.png)
