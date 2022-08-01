@@ -1,5 +1,13 @@
 # NIELIT IITM CTB Design Verification Hackathon
 
+# Table of contents
+
+- [About the Capture the bug Hackathon](#about-the-capture-the-bug-hackathon)
+- [Vyoma's UpTickPro Environment for hackathon](#vyomas-uptickpro-environment-for-hackathon)
+- [challenges-mihirrana620](#challenges-mihirrana620)
+- [Acknowlegdements](#acknowlegdements)
+
+
 ## About the Capture the bug Hackathon
 To provide a basic hands-on for design verification, which enhances practical verification knowledge. The verification challenge helps to understand the verification intent to detect bugs in designs, understand debugging and fix the buggy designs. It provides a practical exposure to real world design verification activities
 
