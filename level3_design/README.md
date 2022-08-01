@@ -145,18 +145,16 @@ endmodule
 
 Firstly Fifo memory is filled with randomized inputs and with each input fifo_counter increases by 1. When the fifo is full buf_full becomes 1 and when the fifo was empty buf_empty was 1. Below are the results when write operation in fifo is performed.
 
-
-![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image8.png)
-
+![image8](https://user-images.githubusercontent.com/84765232/182144854-c5526ca3-eabe-4b36-af75-65a55c92885f.png)
 
 After the fifo memory is filled the inputs are read. As the fifo follow First in First out principle so the value which was written first in the fifo memory is read first. Below are the results when write operation in fifo is performed
 
-![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image9.png)
+
+![image9](https://user-images.githubusercontent.com/84765232/182144806-f2117d0a-5e73-4d66-bf45-8a95fc10c34f.p
 
 Both read and write operation test cases are passed
 
-![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image10.png)
-
+![image10](https://user-images.githubusercontent.com/84765232/182144950-9cffc1f2-ffd4-4e4b-b87d-d9f2a199c327.png)
 
 ### Inserting a bug in Synchronous FIFO
 
@@ -260,7 +258,7 @@ endmodule
 ```
 Here in the above design bug is inserted by changing "+" to "-" i.e. we are decreasing the rd_ptr instead by 1 instead of increasing it by 1. Because of this we get error while verifying Synchronous fifo for read operation. Below shown are the results when we tried to verify Buggy Synchronous FIFO. Firstly we have filled the fifo memory performing the write operation and then while performing read operation we got error.
 
-![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image11.png)
+![image11](https://user-images.githubusercontent.com/84765232/182145014-80161180-8dc9-4e75-9e59-82ed40088392.png)
 
 ## References
 1. https://github.com/mihirrana620/Synchronous-FIFO-NIELIT-IITM-CTB-Verification-Hackathon.git
