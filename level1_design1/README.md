@@ -96,7 +96,7 @@ In the BUG-1 , out should be equal to inp12 when select line (sel) = 5'b01100. H
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image2.png)
 
-In BUG-2 , We can observe that there is no sel = 5'b11110 (30) is defined in Cases. For selecting inp30 we need to define a case for sel = 5'b11110 (30). Hence when we verify the MUX at sel 30 (5'b11110) we get the below error.
+In BUG-2 , We can observe that sel = 5'b11110 (30) is not defined in Cases. For selecting inp30 we need to define a case for sel = 5'b11110 (30). Hence when we verify the MUX at sel 30 (5'b11110) we get the below error.
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image3.png)
 
