@@ -25,3 +25,12 @@ level1_design2  : [Sequence Detector Design Verification](https://github.com/vyo
 level2_design   : [Bitmanipulation Coprocessor Design Verification](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level2_design)
 
 level3_design   : [Synchronous FIFO Design Verification](https://github.com/vyomasystems-lab/challenges-mihirrana620/tree/master/level3_design)
+
+## Acknowlegdements
+1. NIELIT
+2. IIT Madras
+3. Lavanya J , Vyoma systems 
+4. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+
+
+
