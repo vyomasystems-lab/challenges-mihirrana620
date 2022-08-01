@@ -1,3 +1,8 @@
+# Table of contents
+
+- [Bitmanipulation Coprocessor Design Verification](#bitmanipulation-coprocessor-design-verification)
+  - [Capturing the BUG (Bitmanipulation Coprocessor)](#capturing-the-bug-bitmanipulation-coprocessor)
+
 # Bitmanipulation Coprocessor Design Verification
 
 ## Capturing the BUG (Bitmanipulation Coprocessor)
