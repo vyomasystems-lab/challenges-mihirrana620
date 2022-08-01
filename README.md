@@ -12,7 +12,7 @@ This Hackathon is organized by NIELIT Calicut and technically facilitated by Vyo
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
- ![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image1.png)
+![image1](https://user-images.githubusercontent.com/84765232/182143516-24fa1eb6-35d9-4a3b-8bfe-d212eea3b726.png)
 
  ## challenges-mihirrana620
 
@@ -31,6 +31,5 @@ level3_design   : [Synchronous FIFO Design Verification](https://github.com/vyom
 2. IIT Madras
 3. Lavanya J , Vyoma systems 
 4. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-
 
 
