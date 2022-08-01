@@ -187,3 +187,7 @@ Bug_free_Mux.v is verified using for all the test cases. All the test cases are 
 
 ![image5](https://user-images.githubusercontent.com/84765232/182144003-869f8d75-4b13-407b-8410-ea355c7ff932.png)
 
+![image15](https://user-images.githubusercontent.com/84765232/182161556-2ffb5156-0179-43fd-a43d-f05fe875e49f.png)
+
+
+
