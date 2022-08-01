@@ -146,16 +146,16 @@ endmodule
 Firstly Fifo memory is filled with randomized inputs and with each input fifo_counter increases by 1. When the fifo is full buf_full becomes 1 and when the fifo was empty buf_empty was 1. Below are the results when write operation in fifo is performed.
 
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image8.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image8.png)
 
 
 After the fifo memory is filled the inputs are read. As the fifo follow First in First out principle so the value which was written first in the fifo memory is read first. Below are the results when write operation in fifo is performed
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image9.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image9.png)
 
 Both read and write operation test cases are passed
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image10.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image10.png)
 
 
 ### Inserting a bug in Synchronous FIFO

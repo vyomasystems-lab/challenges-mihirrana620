@@ -2,7 +2,7 @@
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
- ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image1.png)
+ ![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image1.png)
 
  ## Verification Environment (MUX)
 
@@ -94,18 +94,18 @@ endmodule
 
 In the BUG-1 , out should be equal to inp12 when select line (sel) = 5'b01100. Here in the above code sel = 5'b01101 is repeating two times which gives error while verifying the MUX at sel = 13 (5'b01101) . Below is the error shown while verfying MUX at sel = 13 (5'b01101)
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image2.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image2.png)
 
 In BUG-2 , We can observe that sel = 5'b11110 (30) is not defined in Cases. For selecting inp30 we need to define a case for sel = 5'b11110 (30). Hence when we verify the MUX at sel 30 (5'b11110) we get the below error.
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image3.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image3.png)
 
 In BUG-3 , We know that when the sel line is of 5 bits there should be 32 inputs in the MUX. Hence we need to add one more input i.e. inp31 in input port list. As well as we also need to define a case for sel =  5'b11110 (31) to select inp31.
 
 
 Apart from the above bugs , All other test cases are passed i.e. by changing sel we are able to correctly fetch the input and the output of DUT matches the input value. Below shown are the Test cases which are passed.
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image4.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image4.png)
 
 ## Resolving the BUG (MUX)
 
@@ -176,4 +176,4 @@ endmodule
 ```
 Bug_free_Mux.v is verified using for all the test cases. All the test cases are successfully passed. Below are the results.
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image5.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image5.png)

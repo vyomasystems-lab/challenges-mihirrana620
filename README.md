@@ -12,7 +12,7 @@ This Hackathon is organized by NIELIT Calicut and technically facilitated by Vyo
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
- ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image1.png)
+ ![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image1.png)
 
  ## challenges-mihirrana620
 

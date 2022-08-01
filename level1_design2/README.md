@@ -109,7 +109,7 @@ BUG-3 : Here next_state should be equal SEQ_1 when input bit is equal to 1 and n
 
 Below result show that the test case fails beacuse of above bugs and is unable to detect 1011 sequence
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image6.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image6.png)
 
 ##  Resolving the BUG (Sequence Detector)
 
@@ -189,9 +189,9 @@ As it overllaping sequnece next_state values are assigned in such way that allow
 
 Below shows the results when the BUG free Sequence Detector is verified. It can be observed that it detects the overlasping sequence.
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
 
 
 ## State Diagram 
 
-![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image14.png)
+![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image14.png)
