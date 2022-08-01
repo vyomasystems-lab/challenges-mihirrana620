@@ -187,7 +187,7 @@ endmodule
 All the bugs mentioned in the previous section are resolved and now only 4 states are used to detect 1011 overllapping Sequence.
 As it overllaping sequnece next_state values are assigned in such way that allows overlap so the final bits of one sequence can be the start of another sequence. 
 
-Below shows the results when the BUG free Sequence Detector is verified. It can be observed that it detects the overlaaping sequence.
+Below shows the results when the BUG free Sequence Detector is verified. It can be observed that it detects the overlasping sequence.
 
 ![ alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image7.png)
 
