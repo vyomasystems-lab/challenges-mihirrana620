@@ -263,6 +263,6 @@ Here in the above design bug is inserted by changing "+" to "-" i.e. we are decr
 ![alt text](https://github.com/vyomasystems-lab/challenges-mihirrana620/blob/master/images/image11.png)
 
 ## References
-1. (https://github.com/mihirrana620/Synchronous-FIFO-NIELIT-IITM-CTB-Verification-Hackathon.git)
+1. https://github.com/mihirrana620/Synchronous-FIFO-NIELIT-IITM-CTB-Verification-Hackathon.git
 
 
