@@ -272,3 +272,4 @@ Here in the above design bug is inserted by changing "+" to "-" i.e. we are decr
 1. https://github.com/mihirrana620/Synchronous-FIFO-NIELIT-IITM-CTB-Verification-Hackathon.git
 
 
+![image15](https://user-images.githubusercontent.com/84765232/182162063-61b4fd22-bba6-4a71-8ca3-03f6fe163a6c.png)
