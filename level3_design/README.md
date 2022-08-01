@@ -1,3 +1,12 @@
+# Table of contents
+
+- [Synchronous FIFO Design Verification (level3_design)](#synchronous-fifo-design-verification-level3_design)
+  - [Verification Environment (Synchronous FIFO)](#verification-environment-synchronous-fifo)
+  - [Design Synchronous FIFO (BUG - Free)](#design-synchronous-fifo-bug---free)
+  - [Verification Results of Synchronous FIFO (BUG - Free)](#verification-results-of-synchronous-fifo-bug---free)
+  - [Inserting a bug in Synchronous FIFO](#inserting-a-bug-in-synchronous-fifo)
+- [References](#references)
+
 ## Synchronous FIFO Design Verification (level3_design)
 
 ### Verification Environment (Synchronous FIFO)
